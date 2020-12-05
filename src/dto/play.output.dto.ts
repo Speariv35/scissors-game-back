@@ -49,7 +49,7 @@ export class PlayOutputDto {
   @ApiProperty({
     description: 'Current score of the game',
     type: ScoreType,
-    example: { user: 23, opponent: 33 },
+    example: { user: 23, opponent: 33, draw: 22 },
   })
   @Type(() => ScoreType)
   public score: ScoreType;

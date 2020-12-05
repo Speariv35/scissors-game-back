@@ -19,7 +19,7 @@ export class AppController {
   }
 
   @ApiOkResponse({
-    type: PlayOutputDto,
+    type: GetScoreOutputDto,
   })
   @ApiBadRequestResponse()
   @Post(`/get-score`)
