@@ -3,6 +3,7 @@ import { HelperService } from '../helper/helper.service';
 import { ScoreService } from '../score/score.service';
 import { GameAvailableOptions } from '../../constants/common';
 import { PlayOutputDto } from '../../dto/play.output.dto';
+import { GetScoreOutputDto } from '../../dto/get-score.output.dto';
 
 @Injectable()
 export class AppService {
@@ -25,5 +26,13 @@ export class AppService {
       winner,
       score,
     };
+  }
+
+  /**
+   * Get current score of game( as there is no sessions and user its overall for all clients);
+   */
+  public async getScore(): Promise<GetScoreOutputDto> {
+    const score = this.scoreService.getScore();
+    return { score };
   }
 }

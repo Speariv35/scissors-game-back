@@ -21,4 +21,11 @@ export class ScoreService {
     winner ? (this._score[winner] += 1) : (this._score.draws += 1);
     return this._score;
   }
+
+  /**
+   * Get current score
+   */
+  public getScore(): ScoreType {
+    return this._score;
+  }
 }
